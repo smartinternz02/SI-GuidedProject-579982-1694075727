@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+    <head>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- awesone fonts css-->
+        <link href="../static/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <!-- owl carousel css-->
+        <link rel="stylesheet" href="../static/owl-carousel/assets/owl.carousel.min.css" type="text/css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <!-- custom CSS -->
+        <link rel="stylesheet" type="text/css"href="{{ url_for('static', filename= 'styles2.css') }}">
+        <title>Prediction</title>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+            <div class="container"><a class="navbar-brand">Reservation Cancellation Prediction</a>
+                <button class="navbar-toggler" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"><span
+                        class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span></button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/details">Prediction</a></li>
+                                               
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid gtco-banner-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <section>
+                            <div class="container">
+                              <div class="row">
+                                <center>
+                                  <div class="  col-lg-7 px-5 pt-5">
+                                    <div class="divider"></div>
+                                        <form action="/predict" method="POST">
+                                            <!-- satisfaction_level -->
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                        <p>no_of_adults<input type="text" placeholder=" " class="form-control" name='no_of_adults'></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                        <!-- last_evaluation -->
+                                                        <p>no_of_children<input type="text" placeholder="" class="form-control" name='no_of_children'></p>
+                                                    </div>
+                                                </div>   
+                                                  
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- number_project -->
+                                                    <p>no_of_weekend_nights<input type="text" placeholder="" class="form-control" name='no_of_weekend_nights'></p>
+                            
+                                                    </div>
+                                                </div>   
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- average_monthly_hours -->
+                                                    <p>no_of_week_nights<input type="text" placeholder="" class="form-control" name='no_of_week_nights'></p>
+                                                    
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- time_spend_company -->
+                                                    <p>type_of_meal_plan<input type="text" placeholder="" class="form-control" name='type_of_meal_plan'></p>
+                            
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- Work_accident -->
+                                                    <p>required_car_parking_space<input type="text" placeholder="" class="form-control" name='required_car_parking_space'></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- left -->
+                                                    <p>room_type_reserved<input type="text" placeholder="" class="form-control" name='room_type_reserved'></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- promotion_last_5years -->
+                                                    <p>lead_time<input type="text" placeholder="" class="form-control" name='lead_time'></p>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- left -->
+                                                    <p>arrival_year<input type="text" placeholder="" class="form-control" name='arrival_year'></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- promotion_last_5years -->
+                                                    <p>arrival_month<input type="text" placeholder="" class="form-control" name='arrival_month'></p>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- left -->
+                                                    <p>arrival_date<input type="text" placeholder="" class="form-control" name='arrival_date'></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- promotion_last_5years -->
+                                                    <p>market_segment_type<input type="text" placeholder="" class="form-control" name='market_segment_type'></p>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- left -->
+                                                    <p>repeated_guest<input type="text" placeholder="" class="form-control" name='repeated_guest'></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- promotion_last_5years -->
+                                                    <p>no_of_previous_cancellation<input type="text" placeholder="" class="form-control" name='no_of_previous_cancellations'></p>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- left -->
+                                                    <p>no_of_previous_bookings_not_canceled<input type="text" placeholder="" class="form-control" name='no_of_previous_bookings_not_canceled'></p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-outline">
+                                                    <!-- promotion_last_5years -->
+                                                    <p>average_price_per_room<input type="text" placeholder="" class="form-control" name='avg_price_per_room'></p>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-outline">
+                                                <!-- promotion_last_5years -->
+                                                <p>no_of_special_requests<input type="text" placeholder="" class="form-control" name='no_of_special_requests'></p>
+                                                
+                                                </div>
+                                            </div>
+                                            
+                                                                          
+                                                                            
+                                        <!-- Submit button -->
+                                        <button  type="submit" class="btn btn-primary" value="pred" <a href="/predict">Predict</a></button>
+                                        </form>
+                                    
+                                    </div> 
+                                </center>
+                              </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../static/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../static/js/popper.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <!-- owl carousel js-->
+        <script src="../static/owl-carousel/owl.carousel.min.js"></script>
+        <script src="../static/js/main.js"></script>
+    </body>
+</html>
+
+
+    
